@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mission-title {
+    font-size: 2em;
+    margin: 0;
+}
+
+.university-name {
+    font-size: 1.2em;
+    color: #003366;
+    margin: 5px 0 20px;
+}
+
+main {
+    margin-bottom: 20px;
+}
+
+main p {
+    margin: 20px 0;
+}
+
+ol {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark .university-name {
+    color: #6EB6FF; /* Light blue for better contrast */
+}
