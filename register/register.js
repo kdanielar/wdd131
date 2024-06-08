@@ -1,28 +1,33 @@
-import { participantTemplate, successTemplate } from './Templates.js';
-
 document.addEventListener('DOMContentLoaded', () => {
     let participantCount = 1;
 
     document.getElementById('addParticipant').addEventListener('click', () => {
+        addParticipant();
+    });
+
+    function addParticipant() {
         participantCount++;
+
         const participants = document.getElementById('participants');
         const newParticipant = participantTemplate(participantCount);
+
         participants.insertAdjacentHTML('beforeend', newParticipant);
-    });
+    }
 
-    document.getElementById('registrationForm').addEventListener('submit', (event) => {
-        event.preventDefault();
-        const adultName = document.querySelector('input[name="name1"]').value;
-        const totalParticipants = participantCount;
-        const totalFee = totalFees();
-        const successMessage = successTemplate({ name: adultName, count: totalParticipants, fee: totalFee });
-        document.getElementById('registrationForm').style.display = 'none';
-        document.body.insertAdjacentHTML('beforeend', successMessage);
-    });
-
-    function totalFees() {
-        let feeElements = document.querySelectorAll("[id^=fee]");
-        feeElements = [...feeElements];
-        return feeElements.reduce((total, feeElement) => total + parseFloat(feeElement.value || 0), 0);
+    function participantTemplate(count) {
+        return `
+            <div class="participant">
+                <label for="name${count}">Name:</label>
+                <input type="text" id="name${count}" name="name${count}" required>
+                <label for="email${count}">Email:</label>
+                <input type="email" id="email${count}" name="email${count}" required>
+                <label>Gender:</label>
+                <input type="radio" id="male${count}" name="gender${count}" value="male" required>
+                <label for="male${count}">Male</label>
+                <input type="radio" id="female${count}" name="gender${count}" value="female" required>
+                <label for="female${count}">Female</label>
+            </div>
+        `;
     }
 });
+
