@@ -19,13 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="participant">
                 <label for="name${count}">Name:</label>
                 <input type="text" id="name${count}" name="name${count}" required>
-                <label for="email${count}">Email:</label>
-                <input type="email" id="email${count}" name="email${count}" required>
-                <label>Gender:</label>
-                <input type="radio" id="male${count}" name="gender${count}" value="male" required>
-                <label for="male${count}">Male</label>
-                <input type="radio" id="female${count}" name="gender${count}" value="female" required>
-                <label for="female${count}">Female</label>
+                <label for="activity${count}">Activity #<span>*</span></label>
+                <input id="activity${count}" type="text" name="activity${count}" />
+                <label for="fee${count}">Fee ($)<span>*</span></label>
+                <input id="fee${count}" type="number" name="fee${count}" />
+                <label for="date${count}">Desired Date <span>*</span></label>
+                <input id="date${count}" type="date" name="date${count}" />
             </div>
         `;
     }

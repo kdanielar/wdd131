@@ -9,32 +9,30 @@
     />
     <link rel="stylesheet" href="register.css" />
   </head>
-  <body>
-    <div class="testbox">
-        <h1>Event Registration</h1>
-        <form id="registrationForm">
-            <fieldset>
-                <legend>Participant Information</legend>
-                <div id="participants">
-                    <div class="participant">
-                        <label for="name1">Name:</label>
-                        <input type="text" id="name1" name="name1" required>
-                        <label for="email1">Email:</label>
-                        <input type="email" id="email1" name="email1" required>
-                        <label>Gender:</label>
-                        <input type="radio" id="male1" name="gender1" value="male" required>
-                        <label for="male1">Male</label>
-                        <input type="radio" id="female1" name="gender1" value="female" required>
-                        <label for="female1">Female</label>
-                    </div>
-                </div>
-                <button type="button" id="addParticipant">Add Another Participant</button>
-            </fieldset>
-            <button type="submit">Submit</button>
-        </form>
-    
-        <script src="register.js" type="module"></script>
-    
+            <body>
+                <h1>Event Registration</h1>
+                <form id="registrationForm">
+                    <fieldset>
+                        <legend>Participant Information</legend>
+                        <div id="participants">
+                            <div class="participant">
+                                <label for="name1">Name:</label>
+                                <input type="text" id="name1" name="name1" required>
+                                <label for="activity">Activity #<span>*</span></label>
+                                <input id="activity" type="text" name="activity" />
+                                <label for="fee">Fee ($)<span>*</span></label>
+                                <input id="fee" type="number" name="fee" />
+                                <label for="date">Desired Date <span>*</span></label>
+                                <input id="date" type="date" name="date" />
+                            </div>
+                        </div>
+                        <button type="button" id="addParticipant">Add Another Participant</button>
+                    </fieldset>
+                    <button type="submit">Submit</button>
+                </form>
+            
+                <script src="register.js" type="module"></script>
+            </body>
 
         <fieldset>
           <legend>Household / Adult Primary Contact</legend>
@@ -130,6 +128,7 @@
         </div>
       </form>
       <section id="summary"></section>
+      <script src="register.js" type="module"></script>
     </div>
   </body>
 </html>
