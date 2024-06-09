@@ -88,6 +88,7 @@ main {
     align-items: center;
     max-width: 600px;
     width: 100%;
+    margin-bottom: 1em;
 }
 
 .recipe img {
@@ -154,8 +155,17 @@ footer .social {
     }
 
     .recipe {
-        flex: 1 1 calc(33.333% - 1em);
-        max-width: calc(33.333% - 1em);
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .recipe img {
+        max-width: 40%;
+        margin-right: 1em;
+    }
+
+    .recipe-info {
+        text-align: left;
     }
 
     footer {
@@ -168,3 +178,4 @@ footer .social {
         justify-content: flex-end;
     }
 }
+
