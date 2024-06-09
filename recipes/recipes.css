@@ -55,7 +55,7 @@ main {
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
-    width: 95%;
+    width: 100%;
     max-width: 1200px;
 }
 
@@ -81,7 +81,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
+    width: 100%;
     max-width: 1200px;
 }
 
@@ -147,6 +147,11 @@ footer .social {
 }
 
 @media (min-width: 960px) {
+    #search-form,
+    #recipes {
+        width: 80%;
+    }
+
     .recipe {
         flex-direction: row;
         align-items: flex-start;
@@ -159,6 +164,7 @@ footer .social {
 
     .recipe-info {
         text-align: left;
+        width: 60%;
     }
 
     footer {
