@@ -12,9 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
             recipeElement.className = 'recipe';
             recipeElement.innerHTML = `
                 <img src="${recipe.image}" alt="${recipe.name}">
-                <h2>${recipe.name}</h2>
-                <div class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
-                    ${'⭐'.repeat(recipe.rating)}${'☆'.repeat(5 - recipe.rating)}
+                <div class="recipe-info">
+                    <span class="tag">${recipe.tag}</span>
+                    <h2>${recipe.name}</h2>
+                    <div class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+                        ${'⭐'.repeat(recipe.rating)}${'☆'.repeat(5 - recipe.rating)}
+                    </div>
+                    <p class="description">${recipe.description}</p>
                 </div>
             `;
             recipesContainer.appendChild(recipeElement);
