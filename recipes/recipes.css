@@ -55,13 +55,17 @@ main {
     display: flex;
     justify-content: center;
     margin-bottom: 1em;
-    width: 100%;
+    width: 90%;
+    max-width: 800px;
 }
 
 #search-input {
-    width: 60%;
+    flex-grow: 1;
     padding: 0.5em;
     font-size: 1em;
+    border: 1px solid var(--primary-color);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
 }
 
 #search-form button {
@@ -70,13 +74,15 @@ main {
     color: var(--text-light);
     border: none;
     cursor: pointer;
+    border-radius: 0 4px 4px 0;
 }
 
 #recipes {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    max-width: 800px;
 }
 
 .recipe {
@@ -86,7 +92,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
     width: 100%;
     margin-bottom: 1em;
 }
@@ -142,18 +147,6 @@ footer .social {
 }
 
 @media (min-width: 960px) {
-    main {
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    #recipes {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .recipe {
         flex-direction: row;
         align-items: flex-start;
