@@ -10,7 +10,7 @@ function getRandomListEntry(list) {
     return list[randomNum];
 }
 
-// Test the random functions
+
 console.log(getRandomListEntry(recipes));
 
 
@@ -43,7 +43,7 @@ function ratingTemplate(rating) {
     return html;
 }
 
-// Test the template functions
+
 const recipe = getRandomListEntry(recipes);
 console.log(recipeTemplate(recipe));
 
@@ -58,7 +58,7 @@ function init() {
     renderRecipes([recipe]);
 }
 
-// Initialize the page with a random recipe
+
 init();
 
 
