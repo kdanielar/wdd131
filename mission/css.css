@@ -1,0 +1,41 @@
+body {
+    line-height: 1.6;
+    background-color: #fff;
+    color: #1a1919e3;
+}
+
+#content {
+    max-width: 60%;
+    margin: 30px auto;
+    padding: 90px;
+    border: 2px solid #ccc;
+}
+h1{
+    font-size: 2em;
+    text-align: center;
+}
+p {
+    color: #035f9c;
+    font-size: 1em;
+    text-align: center;
+}
+
+main p {
+    margin: 40px;
+}
+
+ol {
+    padding-left: 40px;
+    margin: 50px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer img {
+    width: 200px;
+    margin-top: 20px;
+}
+
